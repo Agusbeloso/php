@@ -15,7 +15,7 @@ $aProductos[] = array(
 $aProductos[] = array(
     "nombre" => "Samsung Galaxy A30 Blanco",
     "marca" => "Samsung",
-    "modelo" => "Galaxy A30",
+    "modelo" => "Galaxy A30", 
     "stock" => 0,
     "precio" => 22000,
 );
@@ -65,13 +65,13 @@ $aProductos[] = array(
 
                             <?php
                             $contador = 0;
-                            while ($contador < 3) { ?>
+                            while ($contador < 3) { ?> 
                                 <tr>
-                                    <td><?php echo $aProductos[0]["nombre"]; ?></td>
-                                    <td><?php echo $aProductos[0]["marca"]; ?></td>
-                                    <td><?php echo $aProductos[0]["modelo"]; ?></td>
-                                    <td><?php echo $aProductos[0]["stock"]  > 10 ? "Hay Stock" : ($aProductos[0]["stock"] > 0 && $aProductos[0]["stock"] <= 10 ? "Poco Stock" : "No hay Stock"); ?>
-                                    <td><?php echo $aProductos[0]["precio"]; ?></td>
+                                    <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
+                                    <td><?php echo $aProductos[$contador]["marca"]; ?></td>
+                                    <td><?php echo $aProductos[$contador]["modelo"]; ?></td>
+                                    <td><?php echo $aProductos[$contador]["stock"]  > 10 ? "Hay Stock" : ($aProductos[$contador]["stock"] > 0 && $aProductos[$contador]["stock"] <= 10 ? "Poco Stock" : "No hay Stock"); ?>
+                                    <td><?php echo $aProductos[$contador]["precio"]; ?></td>
                                     <td><button class="btn btn-primary">Comprar</button></td>
                                 </tr>
                             <?php
