@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -15,7 +14,7 @@ $aProductos[] = array(
 $aProductos[] = array(
     "nombre" => "Samsung Galaxy A30 Blanco",
     "marca" => "Samsung",
-    "modelo" => "Galaxy A30", 
+    "modelo" => "Galaxy A30",
     "stock" => 0,
     "precio" => 22000,
 );
@@ -46,7 +45,7 @@ $aProductos[] = array(
     <main class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1>Listado de Productos</h1>
+                <h1>Listado de productos</h1>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -65,7 +64,10 @@ $aProductos[] = array(
 
                             <?php
                             $contador = 0;
-                            while ($contador < 3) { ?>
+                            $sumatoriaPrecio = 0;
+                            for ($contador =0; $contador <count($aProductos);$contador ++) {
+                                $sumatoriaPrecio += $aProductos[$contador]["precio"];
+                            ?>
                                 <tr>
                                     <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
                                     <td><?php echo $aProductos[$contador]["marca"]; ?></td>
@@ -75,22 +77,20 @@ $aProductos[] = array(
                                     <td><button class="btn btn-primary">Comprar</button></td>
                                 </tr>
                             <?php
-                                $contador++;
-                            } ?>
-
+                               
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
-            </div>
-
-
-        </div>
-
-
-
+                <div class="row">
+                    <div class="col-12">
+                        <p>La sumatorio del precio de los productos es: <?php echo $sumatoriaPrecio ?></p>
+                    </div>
+                </div>
 
     </main>
 
 </body>
 
-</html>
+</html>   
