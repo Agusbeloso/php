@@ -13,3 +13,5 @@ echo "El numero $valor es impar";
 }
 
 // echo $valor ==1 || $valor == 3 || $valor == 5 ? "El numero $valor es impar": "El numero $valor es par"; * OTRA FORMA
+
+?>
