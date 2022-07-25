@@ -5,9 +5,9 @@ error_reporting(E_ALL);
 
 function maximo($aVector){
     $maximo = 0;
-    foreach($aVector as $item){
-        if($maximo < $item){
-            $maximo = $item;
+    foreach($aVector as $valor){
+        if($maximo < $valor){
+            $maximo = $valor;
         }
     }
     return $maximo;
